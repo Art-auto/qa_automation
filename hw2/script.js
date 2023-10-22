@@ -52,20 +52,16 @@
 /* 4. Написати функцію, яка рекурсивно виводить в консоль аргумент та збільшує його на 2
 якщо аргумент не перевищує за значенням число 10 */
 function recursiveAddition(value) {
- while(true){
-  if(value <= 8){
-   console.log(value)
-   return  recursiveAddition(value + 2 )
-  } else {
-   console.log(value)
-   break
-  }
+ if(value <= 10) {
+  console.log(value);
+  return  recursiveAddition(value + 2)
  }
 }
-recursiveAddition(10)
+
 recursiveAddition(1)
 recursiveAddition(5)
 recursiveAddition(2)
+recursiveAddition(10)
 
 
 
