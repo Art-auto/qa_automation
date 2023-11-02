@@ -283,6 +283,79 @@
 
 // console.log(test);
 
+// const x = {'value1': 'foo', 'value2': 'bar', s: {'qwerty': 123}}
+// const c = {test1: '123', test2: '345'}
+
+// // let test = Object.create(x)
+// // const newObj = Object.assign(x, c)
+// let newObj = {...x, ...c }
+// console.log();
+
+// x.test3 = 'new data'
+
+// console.log(newObj)
 
 
-// let test = Object.create({value1: 'foo', value2: 'bar'})
+
+const x = {'value1': 'foo', 'value2': 'bar', s: {'qwerty': 123}}
+const c = {test1: '123', test2: '345'}
+
+const emp = ['Test', 'TEst2']
+// Object.seal(x)
+// x.user = 'Artem'
+// x.s = 'Artem'
+
+// console.log(x);
+// console.log(Object.getPrototypeOf(emp));
+
+
+
+// function Animal (eats) {
+//   this.eats = eats
+// }
+
+// const newAnimal = new Animal()
+
+// let test = {
+//   new: 'test'
+// }
+// let animal = { 
+//   eats: 'test',
+//   __proto__: test
+// }
+
+// let rabbit = {
+//   jump: true,
+//   __proto__: animal
+// }
+
+
+// console.log(rabbit.eats);
+// console.log(Object.getPrototypeOf(rabbit));
+
+
+let jsonNew = {
+  "test": "qwerty",
+  "hello": "test",
+  arr: [1,2,3,4,5],
+  helloWorld: {
+    testing: 'qwerty',
+    omit: 'test'
+  },
+  helloWorld2: {
+    testing: 'qwerty',
+    omit: 'test'
+  },
+  toJSON: () => {
+    
+  }
+}
+let obj = JSON.stringify(jsonNew, function replacer(key, value) {
+  if(key === 'helloWorld') {
+    return {'omit': value.omit}
+  } else return value
+}, 3)
+
+console.log(obj);
+
+
