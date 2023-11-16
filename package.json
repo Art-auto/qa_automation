@@ -1,7 +1,7 @@
 {
   "name": "qa_automation",
   "version": "1.0.0",
-  "description": "QA automation course",
+  "description": "QA Automation course - JS intro",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
